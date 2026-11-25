@@ -15,6 +15,7 @@ namespace Dziedzicenie.Models
             Age = age;
         }
 
+
         public void Eat()
         {
             Console.WriteLine($"{Name} je");
@@ -23,6 +24,10 @@ namespace Dziedzicenie.Models
         public void Sleep()
         {
             Console.WriteLine($"{Name} spi");
+        }
+        public virtual void MakeSound() // Virtual allow to override methods
+        {
+            Console.WriteLine($"{Name}: Aaaaaaaaa");
         }
     }
 }

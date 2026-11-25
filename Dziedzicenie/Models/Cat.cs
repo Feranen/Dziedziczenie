@@ -16,7 +16,7 @@ namespace Dziedzicenie.Models
         public Cat(string name, string color, int age) : base(name, age) { 
             Color = color;
         } // Konstructor
-        public void Meow() {
+        public override void MakeSound() { // Overwrite method
             Console.WriteLine($"{Name} MIAU!!");
         }
     }

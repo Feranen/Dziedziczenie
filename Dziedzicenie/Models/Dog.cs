@@ -27,7 +27,7 @@ namespace Dziedzicenie.Models
         public Dog(string name, int age) : base(name, age) {
         
         }
-        public void Bark()
+        public override void MakeSound() // Overwrite method
         {
             Console.WriteLine($"{Name}: Hau.. Hau..");
         }

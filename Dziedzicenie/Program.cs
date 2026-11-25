@@ -6,14 +6,19 @@ namespace Dziedzicenie
     {
         static void Main(string[] args)
         {
-            Dog dog = new Dog { Name = "Tuzik", Age = 4 };
+            // virtual - allow methods to be replaced
+            // override - replace virtual method
+            // protected - private, but available to children
+            // ClassA.Test() -> ClassB. Class B have access to .Test(), but other not
+            Dog dog = new Dog("Tuzik",2);
             dog.Eat();
-            dog.Bark();
+            dog.MakeSound();
             dog.Sleep();
             Cat cat = new Cat("Barsik","Czrny", 2);
             cat.Eat();
-            cat.Meow();
+            cat.MakeSound();
             cat.Sleep();
+            var dog2 = new Dog(dog);
         }
     }
 }
