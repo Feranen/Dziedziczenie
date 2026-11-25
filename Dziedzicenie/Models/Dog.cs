@@ -4,6 +4,7 @@ using System.Text;
 
 namespace Dziedzicenie.Models
 {
+
     public class Dog : Animal // .. : klasaBazowa
     {
 
@@ -13,6 +14,19 @@ namespace Dziedzicenie.Models
         //{
         //    Console.WriteLine($"{Name} je");
         //}
+
+        //Przeciążanie
+        public Dog() : this("", 0) { // this watch for same vars type
+        
+        }
+
+        public Dog(Dog dog) : base(dog.Name, dog.Age) {  // Copy constructor
+            Name = dog.Name;
+            Age = dog.Age;
+        }
+        public Dog(string name, int age) : base(name, age) {
+        
+        }
         public void Bark()
         {
             Console.WriteLine($"{Name}: Hau.. Hau..");

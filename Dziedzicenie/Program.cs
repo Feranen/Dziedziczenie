@@ -6,12 +6,14 @@ namespace Dziedzicenie
     {
         static void Main(string[] args)
         {
-            Dog dog = new Dog { Name = "Tuzik", Age = 4};
+            Dog dog = new Dog { Name = "Tuzik", Age = 4 };
             dog.Eat();
             dog.Bark();
-            Cat cat = new Cat { Name = "Barsik",Age = 2};
+            dog.Sleep();
+            Cat cat = new Cat("Barsik","Czrny", 2);
             cat.Eat();
             cat.Meow();
+            cat.Sleep();
         }
     }
 }
